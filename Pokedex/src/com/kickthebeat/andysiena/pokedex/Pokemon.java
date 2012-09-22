@@ -6,8 +6,35 @@ public class Pokemon {
 	int number; // universal pokedex number
 	String name;
 	String[] types; // make this an enum later I guess
+	String species; //ex. Lightning Pokemon
 	String image_path;
+	String info;
+	String evoData;
 	
+	public String getSpecies() {
+		return species;
+	}
+
+	public void setSpecies(String species) {
+		this.species = species;
+	}
+
+	public String getEvoData() {
+		return evoData;
+	}
+
+	public void setEvoData(String evoData) {
+		this.evoData = evoData;
+	}
+
+	public String getInfo() {
+		return info;
+	}
+
+	public void setInfo(String info) {
+		this.info = info;
+	}
+
 	ArrayList<String> moves; // make a Move class/struct for levels and types
 
 	public int getNumber() {
