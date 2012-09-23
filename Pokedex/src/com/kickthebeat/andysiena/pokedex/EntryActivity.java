@@ -1,20 +1,10 @@
 package com.kickthebeat.andysiena.pokedex;
 
-import android.os.Bundle;
-import android.app.Activity;
-import android.view.Menu;
+import android.support.v4.app.Fragment;
 
-public class EntryActivity extends Activity {
+public class EntryActivity extends SingleFragmentActivity {
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_entry);
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.activity_entry, menu);
-        return true;
-    }
+		protected Fragment createFragment() {
+			return new EntryFragment();
+		}
 }
