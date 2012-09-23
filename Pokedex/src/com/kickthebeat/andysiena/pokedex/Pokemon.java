@@ -2,12 +2,17 @@ package com.kickthebeat.andysiena.pokedex;
 
 import java.util.ArrayList;
 
+import android.net.Uri;
+import android.util.Log;
+
 public class Pokemon {
+	
+	private final String BASEPATH = "android.resource://com.kickthebeat.andysiena.pokedex/drawable/";
+	
 	int number; // universal pokedex number
 	String name;
 	String[] types; // make this an enum later I guess
 	String species; //ex. Lightning Pokemon
-	String image_path;
 	String info;
 	String evoData;
 	
@@ -61,12 +66,9 @@ public class Pokemon {
 		this.types = types;
 	}
 
-	public String getImage_path() {
-		return image_path;
-	}
-
-	public void setImage_path(String image_path) {
-		this.image_path = image_path;
+	public Uri getImageUri() {
+		String path = BASEPATH + "pk_" + getNumber();
+		return Uri.parse(path);
 	}
 
 	public ArrayList<String> getMoves() {
