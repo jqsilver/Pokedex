@@ -3,7 +3,6 @@ package com.kickthebeat.andysiena.pokedex;
 import java.util.ArrayList;
 
 import android.net.Uri;
-import android.util.Log;
 
 public class Pokemon {
 	
